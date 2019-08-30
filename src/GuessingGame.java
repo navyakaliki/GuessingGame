@@ -5,28 +5,28 @@ public class GuessingGame {
         double secretNum = Math.random();
         double rounded = Math.ceil(secretNum * 10);
         Scanner scanner = new Scanner(System.in);
-        System.out.println(secretNum);
-        boolean input = true;
-        while(input) {
-            System.out.println("Enter your guessing ");
-            int userInput = Integer.parseInt(scanner.nextLine());
-            if (rounded == userInput) {
-                System.out.println("You guessed it right");
-                System.exit(0);
-            } else
-            {
-                if(rounded>userInput){
-                    System.out.println("Small");
-                }
-                else if(rounded<userInput){
-                    System.out.println("big");
-                }
+        int count=0;
+          while(true) {
+           System.out.println("Enter your guessing ");
+           int userInput = Integer.parseInt(scanner.nextLine());
+           if (rounded == userInput)
+           {
+               System.out.println("You guessed it right");
+               System.out.printf("number of tries %d\n",count);
+               System.exit(0);
+           }
+           else
+           {
+               if (rounded > userInput) {
+                   System.out.println("Guess is Small");
+               } else if (rounded < userInput) {
+                   System.out.println("Guess is big");
+               }
+           }
+           count=count+1;
+           System.out.println("Try again");
+       }
 
-            }
-                System.out.println("Better luck again");
-            System.out.println(rounded);
-            System.out.println("Do you wish to guess a Number : y");
-             input=scanner.nextLine().equalsIgnoreCase("y");
-        }
     }
 }
+
