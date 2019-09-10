@@ -10,8 +10,8 @@
 Tried building a code as simple as possible 
 
     1.Firstly generated the random Number using Math.random
-    2. As Math.Random() gives a double, converted that to a rounded integer by multiplying with 10
-    3.So the Number are now inbetween 1-10
+    2. As Math.Random() gives a double, converted that to a rounded integer by using Math.ceil multiplying with 10
+    3.So the Number are now in between 1-10
     4. Checked if UserInput equals to Rounded Number
     5.if yes user wins , if not user looses and system Exists 
     
